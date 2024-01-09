@@ -4,6 +4,10 @@ from django.db import models
 
 class Pais(models.Model):       #models es un modulo y Model es la clase  no se puede heredar un modulo sino clases
      nombre = models.CharField(max_length=100)
+     
+     def __str__(self)->str:
+         return self.nombre  
+
 
 class Cliente(models.Model):
     nombre = models.CharField(max_length=100)   
@@ -14,6 +18,9 @@ class Cliente(models.Model):
     
     pais_origen_id = models.ForeignKey(Pais,null=True,blank=True,on_delete=models.SET_NULL)#necesita como argumento el modelo al qeu hace referencia
     
+    
+    def __str__(self) -> str:
+        return f"{self.apellido},{self.nombre}"
     
     
     
