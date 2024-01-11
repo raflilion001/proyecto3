@@ -13,7 +13,7 @@ urlpatterns = [
     path ('',include("core.urls")),
     #en include se pone el nombre de la applicacion y el nombre del modulo 
     
-    path ("",include("cliente.urls")),#nombre de la aplicaion (cliente) y el modulo que es urls
+    path ('Clientess',include("cliente.urls")),#nombre de la aplicaion (cliente) y el modulo que es urls
         
       
 ]

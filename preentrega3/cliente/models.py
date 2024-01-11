@@ -10,6 +10,7 @@ class Pais(models.Model):       #models es un modulo y Model es la clase  no se 
 
 
 class Cliente(models.Model):
+    
     nombre = models.CharField(max_length=100)   
     
     apellido = models.CharField(max_length=100)
