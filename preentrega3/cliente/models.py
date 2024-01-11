@@ -7,6 +7,9 @@ class Pais(models.Model):       #models es un modulo y Model es la clase  no se 
      
      def __str__(self)->str:
          return self.nombre  
+     
+     class Meta:
+         verbose_name_plural = "Países"
 
 
 class Cliente(models.Model):
@@ -17,7 +20,7 @@ class Cliente(models.Model):
     
     nacimiento =models.DateField(null =True, blank =True) # trabaja con la base de datos y con lo que se de en ls vistas (template)
     
-    pais_origen_id = models.ForeignKey(Pais,null=True,blank=True,on_delete=models.SET_NULL)#necesita como argumento el modelo al qeu hace referencia
+    pais_origen_id = models.ForeignKey(Pais,null=True,blank=True,on_delete=models.SET_NULL,verbose_name = "pais de origen")#necesita como argumento el modelo al qeu hace referencia
     
     
     def __str__(self) -> str:
